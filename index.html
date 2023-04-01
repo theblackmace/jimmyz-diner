@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />												
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="header__text">
+          <h1>Yours Diner</h1>
+          <p class="header__subtitle">The best burgers and pizzas in town.</p>
+        </div>
+      </header>
+      <main>
+        <div class="container">        
+          <section class="items" id="items">
+          </section>     
+          <section class="order">         
+            <h2>Your order</h2>
+            <div class="order__list list" id="order__list">       
+            </div>
+            <div class="order__total total">
+              <span class="total__title">Total price:</span>
+              <div class="total__price-container">     
+                <span class="total__price" id='total__price'><span class="dollar">$</span>0</span>    
+              </div>
+            </div>
+            <button class="order-btn" id="order-btn">Complete order</button>
+          </section>
+          <section class="modal" id="modal">     
+            <div class="modal__container">
+              <div class="modal__close">
+                  <img src="img/cross.png" class="cross" id="close-modal-btn">
+              </div>
+              <p class="modal__title">Enter card details</p>
+              <form action="#" id="payment-form">
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  id="customer-name"
+                  class="modal__input"
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="Enter card number"
+                  id=""
+                  class="modal__input"
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="Enter CVV"
+                  id=""
+                  class="modal__input"
+                  required
+                />
+                <button type="submit" class="order-btn pay-btn">Pay</button>
+              </form>
+            </div>     
+          </section>      
+          <section class="thanks" id="thanks">          
+            <div class="thanks__container">
+              <p class="thanks__message">
+                Thanks, <span id="render-name"></span>! Your order is on its way!
+              </p>
+            </div>        
+          </section>       
+        </div>
+      </main>
+    </div>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

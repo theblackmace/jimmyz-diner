@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Smythe&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  margin: 0 10px;
+  font-family: "Smythe", cursive;
+  background-color: rgb(236, 233, 233);
+}
+
+.container {
+  max-width: 530px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 550px;
+  min-height: 100%;
+  margin: 10px auto;
+  background-color: white;
+  border: 3px solid grey;
+  border-radius: 20px;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+
+.dollar {
+    color: #11a272;
+    font-weight: 500;
+}
+
+/*--------- HEADER ---------*/
+
+header {
+  display: flex;
+  max-width: 600px;
+  height: 167px;
+  background: url("img/bg.png") 0 0 / cover no-repeat;
+  color: white;
+}
+
+.header__text {
+  margin: auto 0;
+  padding: 0 0 30px 45px;
+  min-width: 300px;
+}
+
+h1 {
+  margin-bottom: 5px;
+  font-size: 39px;
+}
+
+.header__subtitle {
+  font-size: 23px;
+}
+
+/*--------- ITEMS ---------*/
+
+.items {
+    display: block;
+}
+
+.item {
+  border-bottom: 1px solid #d2d2d2;
+  display: flex;
+  padding: 30px 0;
+  gap: 20px;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.item__img {
+  transition-duration: 0.5s;
+}
+
+.item__img:hover {
+  transform: scale(1.1);
+}
+
+.item__details {
+  flex-grow: 1;
+}
+
+.item__name {
+  font-size: 28px;
+  line-height: 17px;
+  margin-bottom: 5px;
+}
+
+.item__ingredients {
+  font-size: 16px;
+  line-height: 24px;
+  color: #8b8b8b;
+  min-width: 160px;
+  margin-bottom: 3px;
+}
+
+.item__price {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.add-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #dedede;
+  font-size: 32px;
+  background-color: white;
+  color: #3c3c3c;
+  transition-duration: 500ms;
+}
+
+.add-btn:hover {
+  transform: rotate(90deg);
+  background-color: bisque;
+}
+
+/*--------- ORDER ---------*/
+
+.order {
+  margin-top: 30px;
+  padding: 0 20px
+}
+
+h2 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 17px;
+  margin-bottom: 40px;
+}
+
+.list {
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+}
+
+.list__item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.order__name,
+.total__title {
+  font-size: 28px;
+  line-height: 17px;
+}
+.order__remove {
+  font-size: 12px;
+  line-height: 24px;
+  color: #bbbbbb;
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.order__price {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.total {
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+.total__price {
+  font-size: 28px;
+}
+
+.order-btn {
+  display: block;
+  width: 100%;
+  background: #16db99;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  border: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  padding: 17px 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  transition-duration: 0.5s;
+}
+
+.order-btn:hover {
+  background: #11a272;
+}
+
+/*--------- MODAL ---------*/
+
+.modal {
+  display: none;
+  /* display: block; */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 400px;
+  height: 480px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: white;
+  border-radius: 4px;
+  filter: drop-shadow(5.18654px 5.18654px 255.437px rgba(0, 0, 0, 0.5));
+}
+
+.modal__close {
+text-align: end;
+padding: 5px 7px 0 0;
+}
+
+.cross {
+    width: 30px; 
+    cursor: pointer; 
+    transition-duration: 0.1s;
+}
+
+.cross:hover {
+    transform: rotate(90deg); 
+}
+
+.modal__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 475px;
+  margin: 0 auto;
+}
+
+.modal__title {
+  padding: 20px 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+input {
+  border: 1px solid #757575;
+  border-radius: 2px;
+  font-size: 20px;
+  line-height: 31px;
+  padding: 15px 25px;
+  width: 75%;
+}
+
+.pay-btn {
+  margin-top: 30px;
+  max-width: 90%;
+}
+
+/*--------- THANKS ---------*/
+
+.thanks {
+  display: none;
+  height: 120px;
+  background: #ecfdf5;
+  border-radius: 3px;
+  margin: 40px 10px 0;
+}
+
+.thanks__container {
+  margin: auto;
+}
+
+.thanks__message {
+  font-size: 32px;
+  line-height: 27px;
+  color: #065f46;
+  padding: 0 10px;
+}
